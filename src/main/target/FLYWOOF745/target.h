@@ -20,8 +20,13 @@
 
  #pragma once
 
- #define TARGET_BOARD_IDENTIFIER "FLWO"
+ #ifdef FLYWOOF745
+ #define TARGET_BOARD_IDENTIFIER "FWF7"
  #define USBD_PRODUCT_STRING "FLYWOOF745"
+ #else
+ #define TARGET_BOARD_IDENTIFIER "FW7N"
+ #define USBD_PRODUCT_STRING "FLYWOOF745NANO"
+ #endif
 
  #define LED0_PIN   PA2
 
@@ -72,8 +77,13 @@
  #define UART2_TX_PIN PD5
 
  #define USE_UART3
+ #ifdef  FLYWOOF745NANO
+ #define UART3_RX_PIN PD9
+ #define UART3_TX_PIN PD8
+ #else
  #define UART3_RX_PIN PB11
  #define UART3_TX_PIN PB10
+ #endif
 
  #define USE_UART4
  #define UART4_RX_PIN PA1
@@ -130,19 +140,31 @@
 
  #define USE_I2C
  #define USE_I2C_DEVICE_1
- #define I2C_DEVICE                  (I2CDEV_1)
+ #define I2C_DEVICE_1                 (I2CDEV_1)
  #define I2C1_SCL               PB6
  #define I2C1_SDA               PB7
+
+ #ifdef FLYWOOF745NANO
+ #define USE_I2C_DEVICE_2
+ #define I2C_DEVICE_2                  (I2CDEV_2)
+ #define I2C2_SCL                PB10
+ #define I2C2_SDA                PB11
+ #endif
 
  #define USE_ADC
  #define VBAT_ADC_PIN                PC3
  #define CURRENT_METER_ADC_PIN       PC2
  #define RSSI_ADC_PIN                PC5
+ #define DEFAULT_VOLTAGE_METER_SOURCE VOLTAGE_METER_ADC
+ #define DEFAULT_CURRENT_METER_SOURCE CURRENT_METER_ADC
+ #define CURRENT_METER_SCALE_DEFAULT 175
 
  #define USE_LED_STRIP
  #define LED_STRIP_PIN         PD12
+ #define USE_RX_MSP
+ #define RX_MSP_UART SERIAL_PORT_USART5 //default uart5 MSP on
 
- #define DEFAULT_FEATURES        (FEATURE_TELEMETRY | FEATURE_OSD )
+ #define DEFAULT_FEATURES        (FEATURE_TELEMETRY | FEATURE_OSD)
  #define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
  #define SERIALRX_PROVIDER       SERIALRX_SBUS
  #define SERIALRX_UART           SERIAL_PORT_USART3
