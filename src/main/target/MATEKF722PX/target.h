@@ -89,19 +89,20 @@
 #define USE_SPI_DEVICE_2
 #define SPI2_SCK_PIN            PB13
 #define SPI2_MISO_PIN           PB14
-#define SPI2_MOSI_PIN           PB15
+#define SPI2_MOSI_PIN           PC3
 
-#define USE_MAX7456
-#define MAX7456_SPI_INSTANCE    SPI2
-#define MAX7456_SPI_CS_PIN      PC15
-#define MAX7456_SPI_CLK         (SPI_CLOCK_STANDARD)
-#define MAX7456_RESTORE_CLK     (SPI_CLOCK_FAST)
+//#define USE_MAX7456
+//#define MAX7456_SPI_INSTANCE    SPI2
+//#define MAX7456_SPI_CS_PIN      PC15
+//#define MAX7456_SPI_CLK         (SPI_CLOCK_STANDARD)
+//#define MAX7456_RESTORE_CLK     (SPI_CLOCK_FAST)
 
 // *************** SPI3  BLACKBOX****************
 
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 #define USE_FLASHFS
-#define USE_FLASH_M25P16
+//#define USE_FLASH_M25P16
+#define USE_FLASH_W25M
 #define FLASH_CS_PIN            PB12
 #define FLASH_SPI_INSTANCE      SPI2
 
@@ -135,13 +136,13 @@
 #define UART6_TX_PIN            PC6
 #define UART6_RX_PIN            PC7
 
-#define USE_UART10
-#define UART10_TX_PIN           PA2
+//#define USE_UART10
+//#define UART10_TX_PIN           PA2
 
 
 #define USE_SOFTSERIAL1
 
-#define SERIAL_PORT_COUNT       9
+#define SERIAL_PORT_COUNT       8
 
 #define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
 #define SERIALRX_PROVIDER       SERIALRX_SBUS
