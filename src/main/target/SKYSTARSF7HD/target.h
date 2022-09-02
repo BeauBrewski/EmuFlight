@@ -30,6 +30,8 @@
 #define LED0_PIN                PC15
 #define LED1_PIN                PC14
 
+#define USE_LED_STRIP
+
 #define USE_BEEPER
 #define BEEPER_PIN              PB2
 #define BEEPER_INVERTED
@@ -75,8 +77,8 @@
 #define SPI2_MISO_PIN           PB14
 #define SPI2_MOSI_PIN           PB15
 
-#define BMP280_CS_PIN             PA4
-#define BARO_CS_PIN             PA4
+#define BMP280_CS_PIN           PB1
+#define BARO_CS_PIN             PB1
 #define BARO_SPI_INSTANCE       SPI2
 
 #define USE_I2C
@@ -184,11 +186,12 @@
 #define DEFAULT_CURRENT_METER_SOURCE    CURRENT_METER_ADC
 
 #define USE_ESCSERIAL
+//#define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         0xffff
 
-#define USABLE_TIMER_CHANNEL_COUNT 7
+#define USABLE_TIMER_CHANNEL_COUNT  4
 #define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) )
