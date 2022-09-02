@@ -59,10 +59,10 @@
 #define MPU6000_SPI_INSTANCE     SPI1
 
 #define USE_GYRO_SPI_MPU6000
-#define GYRO_MPU6000_ALIGN      CW180_DEG
+#define GYRO_MPU6000_ALIGN      CW270_DEG
 
 #define USE_ACC_SPI_MPU6000
-#define ACC_MPU6000_ALIGN       CW180_DEG
+#define ACC_MPU6000_ALIGN       CW270_DEG
 
 // *************** Baro ************************
 #define USE_BARO
@@ -77,7 +77,7 @@
 #define SPI2_MISO_PIN           PB14
 #define SPI2_MOSI_PIN           PB15
 
-#define BMP280_CS_PIN           PB1
+//#define BMP280_CS_PIN           PB1
 #define BARO_CS_PIN             PB1
 #define BARO_SPI_INSTANCE       SPI2
 
@@ -146,8 +146,8 @@
 // ******* ADC ********
 
 #define USE_ADC
-#define ADC_INSTANCE            ADC3           //Mambaf722 settings verified work for this fc
-#define ADC3_DMA_STREAM         DMA2_Stream0    //Mambaf722 settings verified work for this fc
+#define ADC_INSTANCE            ADC2           //Mambaf722 settings verified work for this fc
+//#define ADC2_DMA_STREAM         DMA2_Stream0    //Mambaf722 settings verified work for this fc
 //#define ADC_INSTANCE            ADC2        //Recommended BF Config Settings
 //#define ADC2_DMA_STREAM         DMA2_Stream3    //Recommended BF Config Settings
 //#define ADC2_DMA_STREAM         DMA2_Stream2    //Based off a guys BF dump online that was used to fix timer/channels as bfconfig wrong
@@ -185,14 +185,15 @@
 #define DEFAULT_VOLTAGE_METER_SOURCE    VOLTAGE_METER_ADC
 #define DEFAULT_CURRENT_METER_SOURCE    CURRENT_METER_ADC
 
-//#define USE_ESCSERIAL
+#define USE_ESCSERIAL
 #define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
 
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff
 #define TARGET_IO_PORTC         0xffff
-#define TARGET_IO_PORTD         0xffff
+#define TARGET_IO_PORTD         (BIT(2))
 
 #define USABLE_TIMER_CHANNEL_COUNT  6
-#define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) )
+#define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(8) )
+//#define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) )
