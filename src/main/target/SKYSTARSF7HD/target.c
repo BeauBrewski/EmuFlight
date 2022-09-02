@@ -34,7 +34,7 @@ const timerHardware_t timerHardware[USABLE_TIMER_CHANNEL_COUNT] = {
     DEF_TIM(TIM1,   CH1,  PA8,   TIM_USE_MOTOR, 0, 0 ), // S3_OUT – UP2-5
     DEF_TIM(TIM1,   CH2,  PA9,   TIM_USE_MOTOR, 0, 0 ), // S4_OUT – UP2-5
 
-    DEF_TIM(TIM1,   CH3,  PA10,   TIM_USE_CAMERA_CONTROL,   0, 0 ), // FC CAM – DMA1_ST7
+    DEF_TIM(TIM1,   CH3,  PA10,   TIM_USE_PPM,   0, 0 ), // FC CAM – DMA1_ST7
 
     DEF_TIM(TIM2,   CH2,  PB3,   TIM_USE_LED,   0, 0 ), // LED_STRIP – DMA1_ST6
 
