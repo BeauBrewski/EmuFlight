@@ -34,7 +34,8 @@
 #define BEEPER_PIN              PB2
 #define BEEPER_INVERTED
 
-//#define ENABLE_DSHOT_DMAR       true
+#define ENABLE_DSHOT_DMAR       true
+#define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
 #define USE_PINIO
 #define PINIO1_PIN PA14 // Bluetooth mode control, PB0 is connected to the 36 pin (P2.0) of the Bluetooth chip. Replace PB0 with the pin for your flight control and 36-pin connection
@@ -61,7 +62,6 @@
 #define USE_GYRO_SPI_MPU6500
 #define USE_SPI_GYRO
 #define USE_ACCGYRO_BMI270
-
 
 #define USE_ACC
 #define USE_ACC_SPI_MPU6000
@@ -185,7 +185,7 @@
 #define USE_OSD
 
 #define DEFAULT_RX_FEATURE      FEATURE_RX_SERIAL
-#define SERIALRX_UART           SERIAL_PORT_USART1
+//#define SERIALRX_UART           SERIAL_PORT_USART1
 #define SERIALRX_PROVIDER       SERIALRX_SBUS
 
 #define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_SOFTSERIAL)
@@ -201,5 +201,5 @@
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         0xffff
 
-#define USABLE_TIMER_CHANNEL_COUNT 7
-#define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3)| TIM_N(4) | TIM_N(8) )
+#define USABLE_TIMER_CHANNEL_COUNT    5
+#define USED_TIMERS             ( TIM_N(2) |TIM_N(4) | TIM_N(8) )
