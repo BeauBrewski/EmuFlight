@@ -23,7 +23,7 @@
 #define USE_TARGET_CONFIG
 
 #define TARGET_BOARD_IDENTIFIER "SSHP"
-#define USBD_PRODUCT_STRING     "SKYSTARSF7HDPRO"
+#define USBD_PRODUCT_STRING     "SKSTRF7HDPRO"
 
 // ******* LEDs and BEEPER ********
 
@@ -107,6 +107,7 @@
 // ******* SERIAL ********
 
 #define USE_VCP
+#define USE_USB_DETECT
 
 #define USE_UART1
 #define USE_UART2
