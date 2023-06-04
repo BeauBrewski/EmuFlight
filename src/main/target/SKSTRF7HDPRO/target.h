@@ -58,7 +58,7 @@
 #define GYRO_1_CS_PIN           PA4
 #define GYRO_1_SPI_INSTANCE     SPI1
 #define GYRO_2_CS_PIN           PC13
-//#define GYRO_2_SPI_INSTANCE     SPI1
+#define GYRO_2_SPI_INSTANCE     SPI0
 
 #define USE_GYRO
 #define USE_GYRO_SPI_MPU6000
