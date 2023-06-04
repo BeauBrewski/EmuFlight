@@ -37,6 +37,9 @@
 #define ENABLE_DSHOT_DMAR       true
 #define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
+#define USE_LED_STRIP
+#define LED_STRIP_PIN         PB3
+
 #define USE_PINIO
 #define PINIO1_PIN PA14 // Bluetooth mode control, PB0 is connected to the 36 pin (P2.0) of the Bluetooth chip. Replace PB0 with the pin for your flight control and 36-pin connection
 
@@ -55,7 +58,7 @@
 #define GYRO_1_CS_PIN           PA4
 #define GYRO_1_SPI_INSTANCE     SPI1
 #define GYRO_2_CS_PIN           PC13
-#define GYRO_2_SPI_INSTANCE     SPI1
+//#define GYRO_2_SPI_INSTANCE     SPI1
 
 #define USE_GYRO
 #define USE_GYRO_SPI_MPU6000
@@ -196,11 +199,13 @@
 
 
 #define USE_ESCSERIAL
+#define ESC_SENSOR_UART         SERIAL_PORT_USART3  //ESC TELEMETRY ON UART3 RX
+
 
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         0xffff
 
-#define USABLE_TIMER_CHANNEL_COUNT    5
-#define USED_TIMERS             ( TIM_N(2) |TIM_N(4) | TIM_N(8) )
+#define USABLE_TIMER_CHANNEL_COUNT    7
+#define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(4) | TIM_N(8) )
