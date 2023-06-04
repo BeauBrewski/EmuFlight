@@ -34,7 +34,7 @@
 #include "config_helper.h"
 
 #define BLUETOOTH_MSP_UART          SERIAL_PORT_UART4
-#define BLUETOOTH_MSP_BAUDRATE      BAUD_19200
+#define BLUETOOTH_MSP_BAUDRATE      BAUD_115200
 #define TELEMETRY_UART              SERIAL_PORT_SOFTSERIAL1
 
 static targetSerialPortFunction_t targetSerialPortFunction[] = {
