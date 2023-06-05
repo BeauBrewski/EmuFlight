@@ -39,6 +39,7 @@
 
 #define USE_LED_STRIP
 #define LED_STRIP_PIN         PB3
+#define RX_PPM_PIN           PB4
 
 #define USE_PINIO
 #define PINIO1_PIN PA14 // Bluetooth mode control, PB0 is connected to the 36 pin (P2.0) of the Bluetooth chip. Replace PB0 with the pin for your flight control and 36-pin connection
