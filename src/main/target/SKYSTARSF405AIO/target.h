@@ -56,16 +56,9 @@
 
  #define USE_BARO
  #define USE_BARO_BMP280
- #define USE_BARO_BMP085
- #define USE_BARO_MS5611
- #define BARO_I2C_INSTANCE (I2CDEV_1)
+  #define BARO_I2C_INSTANCE (I2CDEV_1)
 
- #define USE_MAG
- #define USE_MAG_HMC5883
- #define USE_MAG_QMC5883
- #define MAG_I2C_INSTANCE (I2CDEV_1)
-
- #define USE_MAX7456
+  #define USE_MAX7456
  #define MAX7456_SPI_INSTANCE SPI3
  #define MAX7456_SPI_CS_PIN PB14
 
