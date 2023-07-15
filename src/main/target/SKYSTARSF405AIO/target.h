@@ -103,8 +103,12 @@
 #define MPU6000_SPI_INSTANCE      SPI1
 #define GYRO_MPU6000_ALIGN CW180_DEG
 #define ACC_MPU6000_ALIGN CW180_DEG
-
-
+#define USE_GYRO_SPI_MPU6500
+#define GYRO_MPU6500_ALIGN    CW180_DEG
+#define MPU6500_CS_PIN         MPU6000_CS_PIN
+#define MPU6500_SPI_INSTANCE   MPU6000_SPI_INSTANCE
+#define USE_ACC_SPI_MPU6500
+#define ACC_MPU6500_ALIGN     CW180_DEG
 
 // notice - this file was programmatically generated and may need GYRO_2 manually added.
 
